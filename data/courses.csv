@@ -1,0 +1,31 @@
+id,title,year,dept,language,keywords,clicks
+c01,Theory of Computation,3,Computer,English,0,0
+c02,Database Management Systems,3,Computer,English,0,0
+c03,Software Engineering & Project Management,3,Computer,English,0,0
+c04,Information Systems & Engineering Economics,3,Computer,English,0,0
+c05,Computer Networks,3,Computer,English,0,0
+c06,Design & Analysis of Algorithms,3,Computer,English,0,0
+c07,Systems Programming & Operating System,3,Computer,English,0,0
+c08,Embedded Systems & Internet of Things,3,Computer,English,0,0
+c09,Software Modeling and Design,3,Computer,English,0,0
+c10,Web Technology,3,Computer,English,0,0
+i01,Theory of Computation,3,IT,English,0,0
+i02,Database Management Systems,3,IT,English,0,0
+i03,Software Engineering & Project Management,3,IT,English,0,0
+i04,Operating Systems,3,IT,English,0,0
+i05,Human-Computer Interaction,3,IT,English,0,0
+i06,Computer Network Technology,3,IT,English,0,0
+i07,Systems Programming,3,IT,English,0,0
+i08,Design & Analysis of Algorithms,3,IT,English,0,0
+i09,Cloud Computing,3,IT,English,0,0
+i10,Data Science & Big Data Analytics,3,IT,English,0,0
+e01,Digital Communication,3,ENTC,English,0,0
+e02,Digital Signal processing,3,ENTC,English,0,0
+e03,Electromagnetics,3,ENTC,English,0,0
+e04,Microcontrollers,3,ENTC,English,0,0
+e05,Mechatronics,3,ENTC,English,0,0
+e06,Power Electronics,3,ENTC,English,0,0
+e07,"Information Theory,Coding & Communication Networks",3,ENTC,English,0,0
+e08,Business Management,3,ENTC,English,0,0
+e09,Advanced Processors,3,ENTC,English,0,0
+e10,System Programming & Operating System,3,ENTC,English,0,0

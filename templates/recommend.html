@@ -1,0 +1,608 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Education &mdash; Free Website Template, Free HTML5 Template by freehtml5.co</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Free HTML5 Website Template by freehtml5.co" />
+	<meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
+	<meta name="author" content="freehtml5.co" />
+	<link rel="icon" type="image/png" href="{{url_for('static',filename='images/icons/favicon.png')}}"/>
+	<!-- 
+	//////////////////////////////////////////////////////
+
+	FREE HTML5 TEMPLATE 
+	DESIGNED & DEVELOPED by FreeHTML5.co
+		
+	Website: 		http://freehtml5.co/
+	Email: 			info@freehtml5.co
+	Twitter: 		http://twitter.com/fh5co
+	Facebook: 		https://www.facebook.com/fh5co
+
+	//////////////////////////////////////////////////////
+	 -->
+
+  	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+	<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.3/jquery.mCustomScrollbar.min.css'>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename= 'css/box.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename = 'css/chatbot.css')}}">
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="{{ url_for('static',filename='maincss/animate.css')}}">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="{{url_for('static',filename='maincss/icomoon.css')}}">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="{{ url_for('static',filename='maincss/bootstrap.css')}}">
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="{{ url_for('static',filename='maincss/magnific-popup.css')}}">
+
+	<!-- Owl Carousel  -->
+	<link rel="stylesheet" href="{{url_for( 'static',filename='maincss/owl.carousel.min.css')}}">
+	<link rel="stylesheet" href="{{url_for('static',filename='maincss/owl.theme.default.min.css')}}">
+
+	<!-- Flexslider  -->
+	<link rel="stylesheet" href="{{url_for('static',filename='maincss/flexslider.css')}}">
+
+	<!-- Pricing -->
+	<link rel="stylesheet" href="{{url_for('static',filename='maincss/pricing.css')}}">
+
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="{{url_for('static',filename='maincss/style.css')}}">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<!-- Modernizr JS -->
+	<script src="{{url_for('static',filename='mainjs/modernizr-2.6.2.min.js')}}"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+	<style type="text/css">
+		  .wrap{
+		  width: 50%;
+		  position: absolute;
+		  z-index: 9999999;
+		  /*top: 80%;
+		  left: 50%;*/
+		  transform: translate(150px,20px);
+		  /*text-align: center;*/
+		}
+		/*input {
+		  border: 1px solid transparent;
+		  background-color: #f1f1f1;
+		  padding: 10px;
+		  font-size: 16px;
+		}
+		input[type=text] {
+		  background-color: #f1f1f1;
+		  width: 100%;
+		}
+		input[type=submit] {
+		  background-color: DodgerBlue;
+		  color: #fff;
+		  cursor: pointer;
+		}*/
+		.autocomplete-items {
+		  position: absolute;
+		  border: 1px solid #d4d4d4;
+		  border-bottom: none;
+		  border-top: none;
+		  
+		  /*position the autocomplete items to be the same width as the container:*/
+		  top: 100%;
+		  left: 0;
+		  right: 0;
+		}
+		.autocomplete-items div {
+		  padding: 10px;
+		  cursor: pointer;
+		  background-color: #fff; 
+		  border-bottom: 1px solid #d4d4d4; 
+		}
+		.autocomplete-items div:hover {
+		  /*when hovering an item:*/
+		  background-color: #e9e9e9; 
+		}
+		.autocomplete-active {
+		  /*when navigating through the items using the arrow keys:*/
+		  background-color: DodgerBlue !important; 
+		  color: #ffffff; 
+		  z-index: 99999;
+		}
+
+		.userdisplay{
+			background-color: #ddd;
+			border-radius: 40px;
+			float: right;
+		}
+		
+		.search {
+		  width: 100%;
+		  position: relative
+		  z-index: 99999;
+		}
+
+		.searchTerm {
+		  float: left;
+		  width: 100%;
+		  border: 3px solid #00B4CC;
+		  padding: 5px;
+		  height: 40px;
+		  border-radius: 5px;
+		  outline: none;
+		  color: #9DBFAF;
+		}
+
+		.searchTerm:focus{
+		  color: #00B4CC;
+		}
+
+		.searchButton {
+		  float: left;
+		  position: absolute;  
+		  right: -50px;
+		  width: 40px;
+		  height: 40px;
+		  border: 1px solid #00B4CC;
+		  background: #00B4CC;
+		  text-align: center;
+		  color: #fff;
+		  border-radius: 5px;
+		  cursor: pointer;
+		  font-size: 20px;
+		}
+
+		/*Resize the wrap to see the search bar change!*/
+		
+
+		.currentcources{
+			font-size: 20px;
+			position: relative;
+			left: 50%;
+			top: 50%;
+		}
+
+	
+	</style>
+
+	</head>
+	<body>
+		
+	<div class="fh5co-loader"></div>
+	
+	<div id="page">
+	<nav class="fh5co-nav" role="navigation">
+		<div class="top-menu">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-2">
+						<div id="fh5co-logo"><a href="#"><img src="{{url_for('static',filename = 'images/icons/iconsmall.jpg')}}"></a></div>
+					</div>
+					<div class="col-xs-10 text-right menu-1">
+						<ul>
+							<li><a href="/home">Home</a></li>
+							<li><a href="/courses">Courses</a></li>
+							<li class="active"><a href="/recommend">Recommedations</a></li>
+							<li class="active has-dropdown">
+								<div class="userdisplay">
+									<a href="/home">{{uname}}</a>
+								</div>
+									<ul class="dropdown">
+										<li><a href="/profile">Profile</a></li>
+										<li><a href="/logout">Logout</a></li>
+									</ul>
+							</li>
+							<!-- <li><a href="teacher.html">Teacher</a></li>
+							<li><a href="about.html">About</a></li>
+							<li class="active"><a href="pricing.html">Pricing</a></li> -->
+							<!-- <li class="has-dropdown">
+								<a href="blog.html">Blog</a>
+								<ul class="dropdown">
+									<li><a href="#">Web Design</a></li>
+									<li><a href="#">eCommerce</a></li>
+									<li><a href="#">Branding</a></li>
+									<li><a href="#">API</a></li>
+								</ul>
+							</li>
+							<li><a href="contact.html">Contact</a></li>
+							<li class="btn-cta"><a href="#"><span>Login</span></a></li>
+							<li class="btn-cta"><a href="#"><span>Create a Course</span></a></li> -->
+						</ul>
+						<ul>
+							<li>
+								<div class="wrap">
+								   <div class="search">
+								      <form autocomplete="off" action="/search" method="POST">
+								      	<div class="autocomplete">
+								      		<input type="text" class="searchTerm" placeholder="What are you looking for?" name="searchname" id="searchname">
+								   	  		<button type="submit" class="searchButton">
+								        	<i class="fa fa-search"></i>
+								      		</button>
+								      	</div>
+								      </form>
+								   </div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		<!-- <div class="top-menu">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-2">
+						<div id="fh5co-logo">
+							<a href="#">
+								<img src="{{url_for('static',filename = 'images/icons/icon.jpg')}}"><br/>
+							</a>
+						</div>
+					</div>
+					<div class="col-xs-10 text-right menu-1">
+						<ul>
+							<li>
+								<div class="wrap">
+								   <div class="search">
+								      <input type="text" class="searchTerm" placeholder="What are you looking for?">
+								      <button type="submit" class="searchButton">
+								        <i class="fa fa-search"></i>
+								     </button>
+								   </div>
+								</div>
+							</li>
+							<li class="active has-dropdown">
+								<div class="userdisplay">
+									<a href="/userhome">{{uname}}</a>
+								</div>
+									<ul class="dropdown">
+										<li><a href="/history">History</a></li>
+										<li><a href="/logout">Logout</a></li>
+									</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+				
+			</div>
+		</div> -->
+	</nav>
+
+	<hr>
+	<!-- <div class="row animate-box">
+		<div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
+			<h2>Recommended Courses</h2>
+		</div>
+	</div>
+
+	<aside id="fh5co-hero">
+		<div class="flexslider">
+			<ul class="slides">
+			{% for c in ac %}
+		   	<li style="background-image: url({{url_for('static',filename='mainimages/img_bg_1.jpg')}});">
+		   		<div class="overlay-gradient"></div>
+		   		<div class="container">
+		   			<div class="row">
+			   			<div class="col-md-8 col-md-offset-2 text-center slider-text">
+			   				<div class="slider-text-inner">
+			   					<h1>{{c[0]}}</h1>
+									<p><a class="btn btn-primary btn-lg" href="#">Start Learning Now!</a></p>
+			   				</div>
+			   			</div>
+			   		</div>
+		   		</div>
+		   	</li>
+		   	{% endfor %}
+		   			   	
+		  	</ul>
+	  	</div>
+	</aside> -->
+
+
+	<div id="fh5co-course">
+		<div class="container">
+			
+			<div class="row animate-box">
+				<div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
+					<h1>Course Recommendations</h1>
+					<br><hr>
+					<h4>Based on your Profile</h4>
+				</div>
+			</div>
+
+			<div class="row">
+				{% for item in r2 %}
+				<div class="col-md-6 animate-box">
+					<div class="course">
+						<a href="#" class="course-img" style="background-image:  url(/static/mainimages/coursethumbs/{{item[0]}}.png);">
+						</a>
+						<div class="desc">
+							<h3><a href="#">{{item[1]}}</a></h3>
+							<p>{{item[5]}}</p>
+							<span><p><a class="btn btn-primary btn-lg" 
+							href="/singlecourse/{{item[0]}}">Start Learning Now!</a></p></span>
+						</div>
+					</div>
+				</div>
+				{% endfor %}
+			</div>	
+
+			<div class="row animate-box">
+				<div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
+					<br><hr>
+					<h4>Liked by people like you</h4>
+				</div>
+			</div>
+
+			
+			<div class="row">
+				{% for item in r3 %}
+				<div class="col-md-6 animate-box">
+					<div class="course">
+						<a href="#" class="course-img" style="background-image:  url(/static/mainimages/coursethumbs/{{item[0]}}.png);">
+						</a>
+						<div class="desc">
+							<h3><a href="#">{{item[1]}}</a></h3>
+							<p>{{item[5]}}</p>
+							<span><p><a class="btn btn-primary btn-lg" 
+							href="/singlecourse/{{item[0]}}">Start Learning Now!</a></p></span>
+						</div>
+					</div>
+				</div>
+				{% endfor %}
+			</div>	
+		
+
+		</div>
+	</div>
+
+
+	<div id="chat" class="animated-chat tada" onclick="loadChatbox()"><img src="{{url_for('static',filename = 'images/icons/chatbot.png')}}"></div>
+	
+
+	<div class="chatbox" id="chatbox">
+	<script>
+	//<![CDATA[
+	document.write('<div id="smartchatbox_img901621879" style="width: 350px; height: 450px; overflow: hidden; margin: auto; padding: 0;">');
+	document.write('<div id="smartchatbox901621879" style="width: 280px; height: 450px; overflow: hidden; margin: auto; padding: 0; border:0; ">');
+	// document.write('<iframe src="https://www3.smartchatbox.com/shoutbox/sb.php?key=901621879" scrolling="no" frameborder="0" width="280px" height="450px" style="border:0; margin:0; padding: 0;">');//]]
+	</script>
+
+	<div class="chat">
+	  <div class="chat-title">
+	    <h1>Learning Assistant</h1>
+	    <h2>Always in your service</h2>
+	    <figure class="avatar">
+	      <img src="http://algom.x10host.com/chat/img/icon-oracle.gif" /></figure>
+	      
+	    <div  class="r-nav"> 
+	     <ul>
+	      <li onclick="closeChatbox()"> <a style="cursor: pointer;">X</a></li>
+	      
+	      <li> <a><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMjAuMS4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iJiMxMDU3OyYjMTA4MzsmIzEwODY7JiMxMDgxO18xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDY0IDY0IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA2NCA2NDsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8bGluZWFyR3JhZGllbnQgaWQ9IlNWR0lEXzFfXzQ0MDQyIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjMxLjk5OTMiIHkxPSI3LjI0OTMiIHgyPSIzMS45OTkzIiB5Mj0iNTcuMjczMiIgc3ByZWFkTWV0aG9kPSJyZWZsZWN0Ij4KCTxzdG9wIG9mZnNldD0iMCIgc3R5bGU9InN0b3AtY29sb3I6IzFBNkRGRiIvPgoJPHN0b3Agb2Zmc2V0PSIxIiBzdHlsZT0ic3RvcC1jb2xvcjojQzgyMkZGIi8+CjwvbGluZWFyR3JhZGllbnQ+CjxwYXRoIHN0eWxlPSJmaWxsOnVybCgjU1ZHSURfMV9fNDQwNDIpOyIgZD0iTTU3LjY0NSwzMS44NjRDNTcuMjg5LDMxLjMyMyw1Ni43MDYsMzEsNTYuMDg3LDMxaC0yLjExMUM1My40NDksMTgsNDIuODk4LDcuOTk5LDMwLDcuOTk5ICBDMTYuNzY2LDcuOTk5LDUuOTk5LDE4Ljc2Niw1Ljk5OSwzMlMxNi43NjYsNTYuMDAxLDMwLDU2LjAwMWM2LjI2NywwLDEyLjE5Ni0yLjQsMTYuNjk2LTYuNzU5bC0xLjM5MS0xLjQzOCAgQzQxLjE4LDUxLjgsMzUuNzQ0LDU0LjAwMSwzMCw1NC4wMDFDMTcuODY5LDU0LjAwMSw3Ljk5OSw0NC4xMzEsNy45OTksMzJTMTcuODY5LDkuOTk5LDMwLDkuOTk5QzQxLjc5Niw5Ljk5OSw1MS40NSwyMCw1MS45NzUsMzEgIGgtMi4wNjFjLTAuNjE5LDAtMS4yMDIsMC4zMjMtMS41NTksMC44NjRjLTAuMzk3LDAuNjA1LTAuNDY2LDEuMzk3LTAuMTc3LDIuMDY5bDIuMjY4LDUuMjgzYzAuNDcyLDEuMSwxLjQ1LDEuNzgzLDIuNTU0LDEuNzgzICBjMS4xMDQsMCwyLjA4Mi0wLjY4NCwyLjU1NC0xLjc4M2wyLjI2OC01LjI4M0M1OC4xMTEsMzMuMjYyLDU4LjA0MywzMi40NjksNTcuNjQ1LDMxLjg2NHogTTU1Ljk4NCwzMy4xNDVsLTIuMjY4LDUuMjgzICBjLTAuMzEzLDAuNzI3LTEuMTE5LDAuNzI3LTEuNDMyLDBsLTIuMjY4LTUuMjgzQzQ5Ljk5MywzMy4wODksNTAsMzMuMDM1LDUwLjAxLDMzaDUuOTgxQzU2LjAwMiwzMy4wMzUsNTYuMDA4LDMzLjA4OSw1NS45ODQsMzMuMTQ1ICB6Ii8+CjxsaW5lYXJHcmFkaWVudCBpZD0iU1ZHSURfMl9fNDQwNDIiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMzAiIHkxPSI3LjI0OTMiIHgyPSIzMCIgeTI9IjU3LjI3MzIiIHNwcmVhZE1ldGhvZD0icmVmbGVjdCI+Cgk8c3RvcCBvZmZzZXQ9IjAiIHN0eWxlPSJzdG9wLWNvbG9yOiMxQTZERkYiLz4KCTxzdG9wIG9mZnNldD0iMSIgc3R5bGU9InN0b3AtY29sb3I6I0M4MjJGRiIvPgo8L2xpbmVhckdyYWRpZW50Pgo8cGF0aCBzdHlsZT0iZmlsbDp1cmwoI1NWR0lEXzJfXzQ0MDQyKTsiIGQ9Ik0yOS44NjQsMjQuNjQ0YzAuMzU1LDAuMjM0LDAuNzc2LDAuMzU0LDEuMTk5LDAuMzU0YzAuMjk2LDAsMC41OTMtMC4wNTgsMC44NjktMC4xNzcgIGw1LjI4NC0yLjI2OEMzOC4zMTcsMjIuMDgyLDM5LDIxLjEwMywzOSwyMHMtMC42ODQtMi4wODItMS43ODMtMi41NTRsLTUuMjg0LTIuMjY4Yy0wLjY3MS0wLjI4OC0xLjQ2NC0wLjIyMS0yLjA2OCwwLjE3NyAgQzI5LjMyMywxNS43MTEsMjksMTYuMjkzLDI5LDE2LjkxM3YyLjEzOEMyMiwxOS41NjQsMTcsMjUuMTY5LDE3LDMyYzAsNy4xNjgsNS44MzIsMTMsMTMsMTNzMTMtNiwxMy0xM2gtMmMwLDYtNC45MzUsMTEtMTEsMTEgIHMtMTEtNC45MzUtMTEtMTFjMC01LjcyOCw0LTEwLjQ0MiwxMC0xMC45NXYyLjAzNkMyOSwyMy43MDYsMjkuMzIzLDI0LjI4OCwyOS44NjQsMjQuNjQ0eiBNMzEsMTcuMDA5ICBjMC0wLjAxMiwwLjA4Ny0wLjAxNywwLjE0NCwwLjAwN2w1LjI4NCwyLjI2OEMzNi43OTEsMTkuNDQsMzcsMTkuNzAxLDM3LDIwYzAsMC4yOTktMC4yMDksMC41Ni0wLjU3MiwwLjcxNmwtNS4yODQsMi4yNjggIEMzMS4wODcsMjMuMDA3LDMxLDIzLjAwMiwzMSwyMi45OVYxNy4wMDl6Ii8+CjxsaW5lYXJHcmFkaWVudCBpZD0iU1ZHSURfM19fNDQwNDIiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMjkuOTk5OSIgeTE9IjI2Ljk5OTkiIHgyPSIyOS45OTk5IiB5Mj0iMzcuNzYxOCIgc3ByZWFkTWV0aG9kPSJyZWZsZWN0Ij4KCTxzdG9wIG9mZnNldD0iMCIgc3R5bGU9InN0b3AtY29sb3I6IzZEQzdGRiIvPgoJPHN0b3Agb2Zmc2V0PSIxIiBzdHlsZT0ic3RvcC1jb2xvcjojRTZBQkZGIi8+CjwvbGluZWFyR3JhZGllbnQ+CjxjaXJjbGUgc3R5bGU9ImZpbGw6dXJsKCNTVkdJRF8zX180NDA0Mik7IiBjeD0iMzAiIGN5PSIzMiIgcj0iNCIvPgo8L3N2Zz4K" width="26px" /></a></li>
+	      
+	      
+	     </ul>
+	     
+	     </div>
+	      
+	      
+	 </div>
+	  <div class="messages">
+	    <div class="messages-content"></div>
+	  </div>
+
+	  <div class="message-box">
+	    <input type="text" class="message-input" placeholder="Type message..."></input>
+	    <button type="submit" class="message-submit sound-on-click">Send</button>
+	  </div>
+
+	</div>
+
+	
+
+
+
+	<div class="bg"></div>
+
+</div>
+</div>
+
+	<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.3/jquery.mCustomScrollbar.concat.min.js'></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	    <script src="{{url_for('static',filename = 'js/chatbot.js')}}"></script>
+	<script src="js/sound.js"></script>
+	<div id="close-chat" onclick="closeChatbox()">&times;</div>
+	<div id="minim-chat" onclick="minimChatbox()"><span class="minim-button">&minus;</span></div>
+	<div id="maxi-chat" onclick="loadChatbox()"><span class="maxi-button">&plus;</span></div>
+	
+
+	<script>
+	// //<![CDATA[
+	function loadChatbox(){var e=document.getElementById("minim-chat");e.style.display="block";var e=document.getElementById("maxi-chat");e.style.display="none";var e=document.getElementById("chatbox");e.style.margin="0";}
+	function closeChatbox(){var e=document.getElementById("chatbox");e.style.margin="0 0 -1500px 0";}
+	function minimChatbox(){var e=document.getElementById("minim-chat");e.style.display="none";var e=document.getElementById("maxi-chat");e.style.display="block";var e=document.getElementById("chatbox");e.style.margin="0 0 -460px 0";}
+	//]]>
+	</script>
+
+	<script type="text/javascript">
+	  document.write('</div></div>');
+	</script>
+	
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop">Top</a>
+	</div>
+	
+	<!-- jQuery -->
+	<script src="{{url_for('static',filename='mainjs/jquery.min.js')}}"></script>
+	<!-- jQuery Easing -->
+	<script src="{{url_for('static',filename='mainjs/jquery.easing.1.3.js')}}"></script>
+	<!-- Bootstrap -->
+	<script src="{{url_for('static',filename='mainjs/bootstrap.min.js')}}"></script>
+	<!-- Waypoints -->
+	<script src="{{url_for('static',filename='mainjs/jquery.waypoints.min.js')}}"></script>
+	<!-- Stellar Parallax -->
+	<script src="{{url_for('static',filename='mainjs/jquery.stellar.min.js')}}"></script>
+	<!-- Carousel -->
+	<script src="{{url_for('static',filename='mainjs/owl.carousel.min.js')}}"></script>
+	<!-- Flexslider -->
+	<script src="{{url_for('static',filename='mainjs/jquery.flexslider-min.js')}}"></script>
+	<!-- countTo -->
+	<script src="{{url_for('static',filename='mainjs/jquery.countTo.js')}}"></script>
+	<!-- Magnific Popup -->
+	<script src="{{url_for('static',filename='mainjs/jquery.magnific-popup.min.js')}}"></script>
+	<script src="{{url_for('static',filename='mainjs/magnific-popup-options.js')}}"></script>
+	<!-- Count Down -->
+	<script src="{{url_for('static',filename='mainjs/simplyCountdown.js')}}"></script>
+	<!-- Main -->
+	<script src="{{url_for('static',filename='mainjs/main.js')}}"></script>
+	<script>
+    var d = new Date(new Date().getTime() + 1000 * 120 * 120 * 2000);
+
+    // default example
+    simplyCountdown('.simply-countdown-one', {
+        year: d.getFullYear(),
+        month: d.getMonth() + 1,
+        day: d.getDate()
+    });
+
+    //jQuery example
+    $('#simply-countdown-losange').simplyCountdown({
+        year: d.getFullYear(),
+        month: d.getMonth() + 1,
+        day: d.getDate(),
+        enableUtc: false
+    });
+	</script>
+
+	<script>
+function autocomplete(inp, arr) {
+  /*the autocomplete function takes two arguments,
+  the text field element and an array of possible autocompleted values:*/
+  var currentFocus;
+  /*execute a function when someone writes in the text field:*/
+  inp.addEventListener("input", function(e) {
+      var a, b, i, val = this.value;
+      /*close any already open lists of autocompleted values*/
+      closeAllLists();
+      if (!val) { return false;}
+      currentFocus = -1;
+      /*create a DIV element that will contain the items (values):*/
+      a = document.createElement("DIV");
+      a.setAttribute("id", this.id + "autocomplete-list");
+      a.setAttribute("class", "autocomplete-items");
+      a.setAttribute("style","text-align:left");
+      /*append the DIV element as a child of the autocomplete container:*/
+      this.parentNode.appendChild(a);
+      /*for each item in the array...*/
+      for (i = 0; i < arr.length; i++) {
+        /*check if the item starts with the same letters as the text field value:*/
+        if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+          /*create a DIV element for each matching element:*/
+          b = document.createElement("DIV");
+          /*make the matching letters bold:*/
+          b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+          b.innerHTML += arr[i].substr(val.length);
+          /*insert a input field that will hold the current array item's value:*/
+          b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+          /*execute a function when someone clicks on the item value (DIV element):*/
+          b.addEventListener("click", function(e) {
+              /*insert the value for the autocomplete text field:*/
+              inp.value = this.getElementsByTagName("input")[0].value;
+              /*close the list of autocompleted values,
+              (or any other open lists of autocompleted values:*/
+              closeAllLists();
+          });
+          a.appendChild(b);
+        }
+      }
+  });
+  /*execute a function presses a key on the keyboard:*/
+  inp.addEventListener("keydown", function(e) {
+      var x = document.getElementById(this.id + "autocomplete-list");
+      if (x) x = x.getElementsByTagName("div");
+      if (e.keyCode == 40) {
+        /*If the arrow DOWN key is pressed,
+        increase the currentFocus variable:*/
+        currentFocus++;
+        /*and and make the current item more visible:*/
+        addActive(x);
+      } else if (e.keyCode == 38) { //up
+        /*If the arrow UP key is pressed,
+        decrease the currentFocus variable:*/
+        currentFocus--;
+        /*and and make the current item more visible:*/
+        addActive(x);
+      } else if (e.keyCode == 13) {
+        /*If the ENTER key is pressed, prevent the form from being submitted,*/
+        e.preventDefault();
+        if (currentFocus > -1) {
+          /*and simulate a click on the "active" item:*/
+          if (x) x[currentFocus].click();
+        }
+      }
+  });
+
+  function addActive(x) {
+    /*a function to classify an item as "active":*/
+    if (!x) return false;
+    /*start by removing the "active" class on all items:*/
+    removeActive(x);
+    if (currentFocus >= x.length) currentFocus = 0;
+    if (currentFocus < 0) currentFocus = (x.length - 1);
+    /*add class "autocomplete-active":*/
+    x[currentFocus].classList.add("autocomplete-active");
+  }
+
+  function removeActive(x) {
+    /*a function to remove the "active" class from all autocomplete items:*/
+    for (var i = 0; i < x.length; i++) {
+      x[i].classList.remove("autocomplete-active");
+    }
+  }
+
+  function closeAllLists(elmnt) {
+    /*close all autocomplete lists in the document,
+    except the one passed as an argument:*/
+    var x = document.getElementsByClassName("autocomplete-items");
+    for (var i = 0; i < x.length; i++) {
+      if (elmnt != x[i] && elmnt != inp) {
+        x[i].parentNode.removeChild(x[i]);
+      }
+    }
+  }
+  /*execute a function when someone clicks in the document:*/
+  document.addEventListener("click", function (e) {
+      closeAllLists(e.target);
+      });
+}
+
+/*An array containing all the country names in the world:*/
+
+ var courses = {{cname|tojson}};
+
+/*initiate the autocomplete function on the "myInput" element, and pass along the courses array as possible autocomplete values:*/
+autocomplete(document.getElementById("searchname"), courses);
+</script>
+
+	</body>
+</html>
+

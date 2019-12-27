@@ -1,0 +1,7 @@
+rollno,name,year,dept,language,interest,password,email
+0,admin,0,0,0,0,admin,admin@admin.com
+1,user1,3,Aerospace & Defense,English,0,pwd,user1@gmail.com
+2,user2,3,Marine & Offshore,English,0,pwd,user2@gmail.com
+3,user3,3,Consumer Goods & Retail,English,0,pwd,user3@gmail.com
+4,user4,3,Life Sciences,English,0,pwd,user4@gmail.com
+5,user5,3,"Energy, Process & Utilities",English,0,pwd,user5@gmail.com

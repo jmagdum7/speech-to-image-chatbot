@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Speech Recognition</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.3/jquery.mCustomScrollbar.min.css'>
+  <link rel="stylesheet" type="text/css" href="{{url_for('static', filename= 'css/box.css')}}">
+  <link rel="stylesheet" type="text/css" href="{{url_for('static',filename = 'css/chatbot.css')}}">
+
+</head>
+<body>
+  
+  <div class="chat">
+  <div class="chat-title">
+    <center><h1>ChatBot</h1></center>
+    <!-- <figure class="avatar" id='imageid'> -->
+      <img id="circle" src="{{url_for('static',filename = 'images/chatbot_logo.jpg')}}" />
+    <!-- </figure> -->
+      
+  </div>
+  <div class="messages">
+    <div class="messages-content">
+    	<!-- <div class="message message-personal"> A small yellow bird with a black crown and a short black pointed beak </div>
+    	<div class="message new"><img src="{{url_for('static',filename = 'images/image_bird.png')}}"/></div>   -->  
+    </div>
+  </div>
+  <div class="message-box">
+    <textarea type="text" class="message-input" placeholder="Type message..."></textarea>
+    <button type="submit" class="message-submit sound-on-click">Send</button>
+    <i class="fa fa-microphone" style="margin-right: 15px;"></i>
+  </div>
+
+</div>
+
+  
+
+
+
+<div class="bg"></div>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.3/jquery.mCustomScrollbar.concat.min.js'></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="{{url_for('static',filename = 'js/chatbot.js')}}"></script>
+<!-- <script src="js/sound.js"></script>
+
+ 
+
+</body>
+</html> -->

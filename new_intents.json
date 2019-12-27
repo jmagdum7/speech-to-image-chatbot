@@ -1,0 +1,85 @@
+ {"intents": [
+        {"tag": "greeting",
+         "patterns": ["Hi", "How are you", "Is anyone there?", "Hello", "Good day"],
+         "responses": ["Hello, thanks for visiting", "Good to see you again", "Hi there, how can I help?"],
+         "context_set": ""
+        },
+        {"tag": "goodbye",
+         "patterns": ["Bye", "See you later", "Goodbye"],
+         "responses": ["See you later, thanks for visiting", "Have a nice day", "Bye! Come back again soon."]
+        },
+        {"tag": "thanks",
+         "patterns": ["Thanks", "Thank you", "That's helpful"],
+         "responses": ["Happy to help!", "Any time!", "My pleasure"]
+        },
+        {"tag": "products",
+         "patterns": ["Which products do you have?", "What are the diffrent products?", "Which all products do you have", "show me the products","products"],
+         "responses": ["We have following products CATIA, SIMULIA, ENOVIA and DELMIA . Which product do you want to see?"]
+        },
+        {"tag": "simulia",
+         "patterns": ["I would like to view more about simulia", "simulia", "I would like to see simulia courses", "What is simulia", "What is in simulia", "What is included in simulia" ],
+         "responses": ["We have a total of six courses in it."],
+         "context_set": "simulia_user"
+        },
+        {"tag": "catia",
+         "patterns": ["I would like to view more about catia", "catia", "I would like to see catia courses", "What is catia", "What is in catia", "What is included in catia" ],
+         "responses": ["We have a total of six courses in it."],
+         "context_set": "catia_user"
+        },
+        {"tag": "delmia",
+         "patterns": ["I would like to view more about delmia", "delmia", "I would like to see delmia courses", "What is delmia", "What is in delmia", "What is included in delmia" ],
+         "responses": ["We have a total of six courses in it."],
+         "context_set": "delmia_user"
+        },
+        {"tag": "enovia",
+         "patterns": ["I would like to view more about enovia", "enovia", "I would like to see enovia courses", "What is enovia", "What is in enovia", "What is included in enovia" ],
+         "responses": ["We have a total of six courses in it."],
+         "context_set": "enovia_user"
+        },
+        {"tag": "simulia_detail",
+         "patterns": ["Show me more details", "What is included in it", "list some courses", "show courses", "Tell me more about it"],
+         "responses": ["Theory of Computation", "Database Management Systems", "Software Engineering & Project Management", "Information Systems & Engineering Economics", "Computer Networks", "Design & Analysis of Algorithms", "Systems Programming and Operating Systems", "Software Modeling and Design", "Embedded Systems & Internet of Things", "Web Technology"],
+         "context_filter": "simulia_user"
+        },
+        {"tag": "catia_detail",
+         "patterns": ["Show me more details", "What is included in it", "list some courses", "show courses", "Tell me more about it"],
+         "responses": ["Theory of Computation", "Database Management Systems", "Software Engineering & Project Management", "Information Systems & Engineering Economics", "Computer Networks", "Design & Analysis of Algorithms", "Systems Programming and Operating Systems", "Software Modeling and Design", "Embedded Systems & Internet of Things", "Web Technology"],
+         "context_filter": "catia_user"
+        },
+        {"tag": "enovia_detail",
+         "patterns": ["Show me more details", "What is included in it", "list some courses", "show courses", "Tell me more about it"],
+         "responses": ["Theory of Computation", "Database Management Systems", "Software Engineering & Project Management", "Information Systems & Engineering Economics", "Computer Networks", "Design & Analysis of Algorithms", "Systems Programming and Operating Systems", "Software Modeling and Design", "Embedded Systems & Internet of Things", "Web Technology"],
+         "context_filter": "enovia_user"
+        },
+        {"tag": "delmia_detail",
+         "patterns": ["Show me more details", "What is included in it", "list some courses", "show courses", "Tell me more about it"],
+         "responses": ["Theory of Computation", "Database Management Systems", "Software Engineering & Project Management", "Information Systems & Engineering Economics", "Computer Networks", "Design & Analysis of Algorithms", "Systems Programming and Operating Systems", "Software Modeling and Design", "Embedded Systems & Internet of Things", "Web Technology"],
+         "context_filter": "delmia_user"
+        },
+        {"tag": "courses_simulia",
+         "patterns": ["What are the courses for simulia", "Courses for simulia", "Courses on simulia"],
+         "responses": ["Digital Communication", "Digital Signal processing", "Electromagnetics", "Microcontrollers", "Mechatronics"]
+        },
+        {"tag": "courses_catia",
+         "patterns": ["What are the courses for catia", "Courses for catia", "Courses on catia"],
+         "responses": ["Digital Communication", "Digital Signal processing", "Electromagnetics", "Microcontrollers", "Mechatronics"]
+        },
+        {"tag": "courses_enovia",
+         "patterns": ["What are the courses for enovia", "Courses for enovia", "Courses on enovia"],
+         "responses": ["Digital Communication", "Digital Signal processing", "Electromagnetics", "Microcontrollers", "Mechatronics"]
+        },
+        {"tag": "courses_delmia",
+         "patterns": ["What are the courses for delmia", "Courses for delmia", "Courses on delmia"],
+         "responses": ["Digital Communication", "Digital Signal processing", "Electromagnetics", "Microcontrollers", "Mechatronics"]
+        },
+        {"tag": "toc",
+         "patterns": ["Tell me about theory of computation", "What is theory of computation"],
+         "responses": ["Theoretical branch of Computer Science and Mathematics, which mainly deals with the logic of computation with respect to simple machines, referred to as automata"]
+        },
+        {"tag": "dbms",
+         "patterns": ["Tell me about database management", "What is dbms"],
+         "responses": ["DBMS is a database program"]
+        }
+
+   ]
+}

@@ -1,0 +1,390 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Education &mdash; Free Website Template, Free HTML5 Template by freehtml5.co</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Free HTML5 Website Template by freehtml5.co" />
+	<meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
+	<meta name="author" content="freehtml5.co" />
+	<link rel="icon" type="image/png" href="{{url_for('static',filename='images/icons/favicon.png')}}"/>
+	<!-- 
+	//////////////////////////////////////////////////////
+
+	FREE HTML5 TEMPLATE 
+	DESIGNED & DEVELOPED by FreeHTML5.co
+		
+	Website: 		http://freehtml5.co/
+	Email: 			info@freehtml5.co
+	Twitter: 		http://twitter.com/fh5co
+	Facebook: 		https://www.facebook.com/fh5co
+
+	//////////////////////////////////////////////////////
+	 -->
+
+  	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400" rel="stylesheet">
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="{{ url_for('static',filename='maincss/animate.css')}}">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="{{url_for('static',filename='maincss/icomoon.css')}}">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="{{ url_for('static',filename='maincss/bootstrap.css')}}">
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="{{ url_for('static',filename='maincss/magnific-popup.css')}}">
+
+	<!-- Owl Carousel  -->
+	<link rel="stylesheet" href="{{url_for( 'static',filename='maincss/owl.carousel.min.css')}}">
+	<link rel="stylesheet" href="{{url_for('static',filename='maincss/owl.theme.default.min.css')}}">
+
+	<!-- Flexslider  -->
+	<link rel="stylesheet" href="{{url_for('static',filename='maincss/flexslider.css')}}">
+
+	<!-- Pricing -->
+	<link rel="stylesheet" href="{{url_for('static',filename='maincss/pricing.css')}}">
+
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="{{url_for('static',filename='maincss/style.css')}}">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<!-- Modernizr JS -->
+	<script src="{{url_for('static',filename='mainjs/modernizr-2.6.2.min.js')}}"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+	<style type="text/css">
+
+		.userdisplay{
+			background-color: #ddd;
+			border-radius: 40px;
+			float: right;
+		}
+		
+		.search {
+		  width: 100%;
+		  position: relative
+		}
+
+		.searchTerm {
+		  float: left;
+		  width: 100%;
+		  border: 3px solid #00B4CC;
+		  padding: 5px;
+		  height: 40px;
+		  border-radius: 5px;
+		  outline: none;
+		  color: #9DBFAF;
+		}
+
+		.searchTerm:focus{
+		  color: #00B4CC;
+		}
+
+		.searchButton {
+		  float: left;
+		  position: absolute;  
+		  right: -50px;
+		  width: 40px;
+		  height: 40px;
+		  border: 1px solid #00B4CC;
+		  background: #00B4CC;
+		  text-align: center;
+		  color: #fff;
+		  border-radius: 5px;
+		  cursor: pointer;
+		  font-size: 20px;
+		}
+
+		/*Resize the wrap to see the search bar change!*/
+		.wrap{
+		  width: 50%;
+		  position: absolute;
+		  /*top: 80%;
+		  left: 50%;*/
+		  transform: translate(150px,20px);
+		  /*text-align: center;*/
+		}
+
+		.currentcources{
+			font-size: 20px;
+			position: relative;
+			left: 50%;
+			top: 50%;
+		}
+
+	
+	</style>
+
+	</head>
+	<body>
+		
+	<div class="fh5co-loader"></div>
+	
+	<div id="page">
+	<nav class="fh5co-nav" role="navigation">
+		<div class="top-menu">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-2">
+						<div id="fh5co-logo"><a href="#"><img src="{{url_for('static',filename = 'images/icons/iconsmall.jpg')}}"></a></div>
+					</div>
+					<div class="col-xs-10 text-right menu-1">
+						<ul>
+							<li><a href="#">Home</a></li>
+							<li><a href="/courses">Courses</a></li>
+							<li><a href="/recommend">Recommedations</a></li>
+							<li class="active has-dropdown">
+								<div class="userdisplay">
+									<a href="#">{{uname}}</a>
+								</div>
+									<ul class="dropdown">
+										<li><a href="/profile">Profile</a></li>
+										<li><a href="/logout">Logout</a></li>
+									</ul>
+							</li>
+							<!-- <li><a href="teacher.html">Teacher</a></li>
+							<li><a href="about.html">About</a></li>
+							<li class="active"><a href="pricing.html">Pricing</a></li> -->
+							<!-- <li class="has-dropdown">
+								<a href="blog.html">Blog</a>
+								<ul class="dropdown">
+									<li><a href="#">Web Design</a></li>
+									<li><a href="#">eCommerce</a></li>
+									<li><a href="#">Branding</a></li>
+									<li><a href="#">API</a></li>
+								</ul>
+							</li>
+							<li><a href="contact.html">Contact</a></li>
+							<li class="btn-cta"><a href="#"><span>Login</span></a></li>
+							<li class="btn-cta"><a href="#"><span>Create a Course</span></a></li> -->
+						</ul>
+						<ul>
+							<li>
+								<div class="wrap">
+								   <div class="search">
+								      <input type="text" class="searchTerm" placeholder="What are you looking for?">
+								      <button type="submit" class="searchButton">
+								        <i class="fa fa-search"></i>
+								     </button>
+								   </div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		<!-- <div class="top-menu">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-2">
+						<div id="fh5co-logo">
+							<a href="#">
+								<img src="{{url_for('static',filename = 'images/icons/icon.jpg')}}"><br/>
+							</a>
+						</div>
+					</div>
+					<div class="col-xs-10 text-right menu-1">
+						<ul>
+							<li>
+								<div class="wrap">
+								   <div class="search">
+								      <input type="text" class="searchTerm" placeholder="What are you looking for?">
+								      <button type="submit" class="searchButton">
+								        <i class="fa fa-search"></i>
+								     </button>
+								   </div>
+								</div>
+							</li>
+							<li class="active has-dropdown">
+								<div class="userdisplay">
+									<a href="/userhome">{{uname}}</a>
+								</div>
+									<ul class="dropdown">
+										<li><a href="/history">History</a></li>
+										<li><a href="/logout">Logout</a></li>
+									</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+				
+			</div>
+		</div> -->
+	</nav>
+
+	<hr>
+	<div class="row animate-box">
+		<div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
+			<h2>Current Courses</h2>
+		</div>
+	</div>
+
+	<aside id="fh5co-hero">
+		<div class="flexslider">
+			<ul class="slides">
+			{% for c in ac %}
+		   	<li style="background-image: url({{url_for('static',filename='mainimages/img_bg_1.jpg')}});">
+		   		<div class="overlay-gradient"></div>
+		   		<div class="container">
+		   			<div class="row">
+			   			<div class="col-md-8 col-md-offset-2 text-center slider-text">
+			   				<div class="slider-text-inner">
+			   					<h1>{{c[0]}}</h1>
+									<p><a class="btn btn-primary btn-lg" href="#">Start Learning Now!</a></p>
+			   				</div>
+			   			</div>
+			   		</div>
+		   		</div>
+		   	</li>
+		   	{% endfor %}
+		   			   	
+		  	</ul>
+	  	</div>
+	</aside>
+
+
+	<div id="fh5co-course">
+		<div class="container">
+			
+			<div class="row animate-box">
+				<div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
+					<h1>Course Recommendations</h1>
+					<br><hr>
+					<h4>Based on your current cources</h4>
+				</div>
+			</div>
+			
+			
+			<div class="row">
+				{% for item in r1 %}
+				<div class="col-md-6 animate-box">
+					<div class="course">
+						<a href="#" class="course-img" style="background-image:  url({{url_for('static',filename='mainimages/project-1.jpg')}});">
+						</a>
+						<div class="desc">
+							<h3><a href="#">{{item}}</a></h3>
+							<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+							<span><a href="#" class="btn btn-primary btn-sm btn-course">Take A Course</a></span>
+						</div>
+					</div>
+				</div>
+				{% endfor %}
+			</div>	
+
+			<div class="row animate-box">
+				<div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
+					<br><hr>
+					<h4>Based on your Profile</h4>
+				</div>
+			</div>
+
+			<div class="row">
+				{% for item in r2 %}
+				<div class="col-md-6 animate-box">
+					<div class="course">
+						<a href="#" class="course-img" style="background-image:  url({{url_for('static',filename='mainimages/project-1.jpg')}});">
+						</a>
+						<div class="desc">
+							<h3><a href="#">{{item}}</a></h3>
+							<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+							<span><a href="#" class="btn btn-primary btn-sm btn-course">Take A Course</a></span>
+						</div>
+					</div>
+				</div>
+				{% endfor %}
+			</div>	
+
+			<div class="row animate-box">
+				<div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
+					<br><hr>
+					<h4>Liked by people like you</h4>
+				</div>
+			</div>
+
+			
+			<div class="row">
+				{% for item in r3 %}
+				<div class="col-md-6 animate-box">
+					<div class="course">
+						<a href="#" class="course-img" style="background-image:  url({{url_for('static',filename='mainimages/project-1.jpg')}});">
+						</a>
+						<div class="desc">
+							<h3><a href="#">{{item}}</a></h3>
+							<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+							<span><a href="#" class="btn btn-primary btn-sm btn-course">Take A Course</a></span>
+						</div>
+					</div>
+				</div>
+				{% endfor %}
+			</div>	
+		
+
+		</div>
+	</div>
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop">Top</a>
+	</div>
+	
+	<!-- jQuery -->
+	<script src="{{url_for('static',filename='mainjs/jquery.min.js')}}"></script>
+	<!-- jQuery Easing -->
+	<script src="{{url_for('static',filename='mainjs/jquery.easing.1.3.js')}}"></script>
+	<!-- Bootstrap -->
+	<script src="{{url_for('static',filename='mainjs/bootstrap.min.js')}}"></script>
+	<!-- Waypoints -->
+	<script src="{{url_for('static',filename='mainjs/jquery.waypoints.min.js')}}"></script>
+	<!-- Stellar Parallax -->
+	<script src="{{url_for('static',filename='mainjs/jquery.stellar.min.js')}}"></script>
+	<!-- Carousel -->
+	<script src="{{url_for('static',filename='mainjs/owl.carousel.min.js')}}"></script>
+	<!-- Flexslider -->
+	<script src="{{url_for('static',filename='mainjs/jquery.flexslider-min.js')}}"></script>
+	<!-- countTo -->
+	<script src="{{url_for('static',filename='mainjs/jquery.countTo.js')}}"></script>
+	<!-- Magnific Popup -->
+	<script src="{{url_for('static',filename='mainjs/jquery.magnific-popup.min.js')}}"></script>
+	<script src="{{url_for('static',filename='mainjs/magnific-popup-options.js')}}"></script>
+	<!-- Count Down -->
+	<script src="{{url_for('static',filename='mainjs/simplyCountdown.js')}}"></script>
+	<!-- Main -->
+	<script src="{{url_for('static',filename='mainjs/main.js')}}"></script>
+	<script>
+    var d = new Date(new Date().getTime() + 1000 * 120 * 120 * 2000);
+
+    // default example
+    simplyCountdown('.simply-countdown-one', {
+        year: d.getFullYear(),
+        month: d.getMonth() + 1,
+        day: d.getDate()
+    });
+
+    //jQuery example
+    $('#simply-countdown-losange').simplyCountdown({
+        year: d.getFullYear(),
+        month: d.getMonth() + 1,
+        day: d.getDate(),
+        enableUtc: false
+    });
+	</script>
+	</body>
+</html>
+
